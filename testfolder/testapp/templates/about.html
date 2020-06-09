@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href="{% static 'css/styles_Django.css' %}">
+</head>
+<body>
+    about 페이지입니다.
+    <a href="{% url 'home' %}">home페이지로 가기</a>
+</body>
+</html>

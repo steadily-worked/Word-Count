@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta property="og:title" content="Django Word Count">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <title>Word Count!</title>
+    <link rel='stylesheet' href="{% static 'css/styles_Django.css' %}">
+</head>
+<body>
+    <div class="title">
+        <p>📝 단어나 문장을 입력해보세요!</p>
+    </div>
+    <!-- <a class="about" href="{% url 'about' %}">about페이지로 가기</a> -->
+    <form class="form" action="{% url 'result' %}" method="POST">
+        {% csrf_token %}
+        <textarea class="textarea"
+        name="text" rows="15" cols="70"
+        autofocus
+        required wrap="hard"
+        placeholder="여기에 작성해주세요!"
+        ></textarea>
+        <button class="button" type="submit">결과 확인!</button>
+    </form>
+    <div class="link">
+        <a href="https://steadily-worked.github.io">🤔 누가 만들었을까요?</a>
+    </div>
+</body>
+</html>

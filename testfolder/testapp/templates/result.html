@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Count!</title>
+    <link rel='stylesheet' href="{% static 'css/styles_Django.css' %}">
+</head>
+<body>
+    <div class="explanation">
+        이 문장에서 글자는 {{count}}개가 사용됐어요!<br>
+        공백을 제외하면 순수하게 {{without_space}}글자가 사용됐네요.<br>
+        단어는 {{word_count}}개가 사용됐어요.
+    </div>
+    <div class="explanation-word">
+        /각 단어들이 몇 번 나왔는지 알려드릴게요:
+        {% for word, count in word_dict %}
+        <p>{{word}}가 {{count}}번 만큼 나왔습니다.</p>
+        {% endfor %}
+    </div>
+</body>
+</html>
