@@ -4,13 +4,10 @@
 body {
     font-family: 'Apple SD Gothic Neo';
     margin: 0 auto;
-    width: 800px;
+    width: 600px;
     background-color: black;
     color: white;
 
-}
-.title > p, .textarea, .link, .button {
-    margin-left: 10px;
 }
 .title > p {
     font-weight: 600;
@@ -27,19 +24,53 @@ body {
     margin: 0 auto;
 }
 .textarea {
+    margin-left: 0px;
+    width: 600px;
+    height: 150px;
     display: block;
     resize: none;
     margin-bottom: 10px;
     padding: 10px;
 }
-.button {
-    display: block;
-    float: right;
+.checkin > p {
+    font-weight: bold;
 }
+.checkin {
+    position: relative;
+    height: 260px;
+}
+.checkin > .highlight {
+    position: absolute;
+    left: -15px;
+    top: 0;
+    width: 3px;
+    border-radius: 3px;
+    background-color: white;
+    height: 100%;
+}
+button {
+    width: 154px;
+    height: 40px;
+    border-radius: 4px;
+    float: right;
+    background-color: #55c796;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 20px;
+    border: none;
+    border-color: #53ad78;
+}
+button h3 {
+    font-size: 16px;
+    margin: 0;
+    color: white;
+}
+
 .link {
     font-weight: bold;
     font-size: 25px;
-    margin-top: 30px;
+    margin-top: 70px;
+    margin-left: 0px;
 }
 @media (max-width: 768px) {
     body {
@@ -51,3 +82,10 @@ body {
     }
 }
 /* result */
+
+.explanation {
+    margin-top: 30px;
+}
+li {
+    margin-bottom: 5px;
+}

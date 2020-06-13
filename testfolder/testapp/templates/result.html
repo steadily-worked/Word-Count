@@ -8,16 +8,29 @@
     <link rel='stylesheet' href="{% static 'css/styles_Django.css' %}">
 </head>
 <body>
+    <div class="title">
+        <p>분석한 결과입니다 😊</p>
+    </div>
     <div class="explanation">
-        이 문장에서 글자는 {{count}}개가 사용됐어요!<br>
-        공백을 제외하면 순수하게 {{without_space}}글자가 사용됐네요.<br>
-        단어는 {{word_count}}개가 사용됐어요.
+        <ul>
+        <li>이 문장에서 글자는 {{count}}개가 사용됐어요!<br></li>
+        <li>공백을 제외하면 {{without_space}}개가 사용됐구요.<br></li>
+        <li>단어는 {{word_count}}개입니다!</li>
+    </ul>
+    </div>
+    <div class="title">
+        <p>각 단어들이 몇 번 나왔는지 알려드릴게요:</p>
     </div>
     <div class="explanation-word">
-        /각 단어들이 몇 번 나왔는지 알려드릴게요:
+        <ul>
         {% for word, count in word_dict %}
-        <p>{{word}}가 {{count}}번 만큼 나왔습니다.</p>
+        <li>{{word}}가 {{count}}번 만큼 나왔습니다!</li>
         {% endfor %}
+        </ul>
     </div>
+    <div class="link">
+        <a href="https://steadily-worked.github.io">🤔 누가 만들었을까요?</a>
+    </div>
+
 </body>
 </html>

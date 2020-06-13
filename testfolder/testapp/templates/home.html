@@ -15,14 +15,18 @@
     <!-- <a class="about" href="{% url 'about' %}">about페이지로 가기</a> -->
     <form class="form" action="{% url 'result' %}" method="POST">
         {% csrf_token %}
+    <div class='checkin'>
+        <div class='highlight'></div>
+        <p>단어의 갯수를 세줍니다 😆</p>
         <textarea class="textarea"
-        name="text" rows="15" cols="70"
+        name="text"
         autofocus
         required wrap="hard"
         placeholder="여기에 작성해주세요!"
         ></textarea>
-        <button class="button" type="submit">결과 확인!</button>
-    </form>
+        <button type="submit"><h3>결과 확인</h3></button>
+    </div>
+</form>
     <div class="link">
         <a href="https://steadily-worked.github.io">🤔 누가 만들었을까요?</a>
     </div>
